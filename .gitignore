@@ -1,0 +1,251 @@
+# =============================================================================
+# The Shank Squad Golf Tracker - .gitignore
+# =============================================================================
+
+# Environment Variables & Secrets
+# =============================================================================
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.staging
+config/secrets.js
+config/keys.js
+supabase-secrets.json
+api-keys.txt
+
+# Golf Data & Exports
+# =============================================================================
+exports/
+backups/
+*.golf-backup
+*.json.backup
+golf-data-*.json
+handicap-reports/
+tournament-data/
+course-images/
+user-uploads/
+
+# Development & Build Files
+# =============================================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.npm
+.yarn-integrity
+dist/
+build/
+coverage/
+.nyc_output
+
+# Editor & IDE Files
+# =============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+.metadata
+*.sublime-project
+*.sublime-workspace
+.brackets.json
+
+# OS Generated Files
+# =============================================================================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Logs & Runtime Files
+# =============================================================================
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.grunt
+pids
+*.pid
+*.seed
+*.pid.lock
+lib-cov
+.lock-wscript
+
+# Testing & Coverage
+# =============================================================================
+.coverage
+.jest/
+coverage/
+.nyc_output/
+test-results/
+cypress/videos/
+cypress/screenshots/
+e2e-results/
+*.lcov
+junit.xml
+
+# Temporary Files
+# =============================================================================
+tmp/
+temp/
+.tmp/
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.vuepress/dist
+.serverless/
+.fusebox/
+.dynamodb/
+
+# Documentation Build
+# =============================================================================
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/
+Gemfile.lock
+docs/build/
+mkdocs/site/
+
+# Golf Tracker Specific
+# =============================================================================
+# Local development database copies
+*.db
+*.sqlite
+*.sqlite3
+
+# User profile images/avatars
+user-avatars/
+profile-pics/
+
+# Course layout files
+course-maps/
+hole-diagrams/
+
+# Performance analysis reports
+performance-reports/
+statistics-cache/
+
+# Golf tournament data
+tournaments/
+leaderboards/
+
+# Scorecard PDFs and exports
+scorecards/
+*.pdf
+*.csv
+*.xlsx
+
+# Golf GPS and mapping data
+gps-data/
+course-coordinates/
+*.gpx
+*.kml
+
+# Weather data cache
+weather-cache/
+conditions-data/
+
+# Mobile App Files (future expansion)
+# =============================================================================
+platforms/
+plugins/
+www/
+.cordova/
+hooks/
+res/
+
+# Analytics & Tracking
+# =============================================================================
+.firebase/
+firebase-debug.log
+.vercel
+analytics-data/
+tracking-pixels/
+
+# Archive & Backup Files
+# =============================================================================
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.bak
+*.backup
+*.old
+archive/
+old-versions/
+
+# Miscellaneous
+# =============================================================================
+.eslintcache
+.stylelintcache
+.prettierignore
+.editorconfig
+.browserslistrc
+robots.txt
+sitemap.xml
+.well-known/
+
+# Future Features (commented out for now)
+# =============================================================================
+# Uncomment these if you add these features later:
+
+# Node.js backend (if added)
+# server/node_modules/
+# server/logs/
+# server/.env
+
+# React/Vue build (if migrated to framework)
+# public/static/
+# src/assets/generated/
+
+# PWA files (if made into Progressive Web App)
+# sw.js
+# workbox-*.js
+# manifest.json
+
+# Docker (if containerized)
+# Dockerfile.prod
+# docker-compose.override.yml
+# .dockerignore
