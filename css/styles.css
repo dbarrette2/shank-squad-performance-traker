@@ -1,6 +1,6 @@
 /* =============================================================================
-   The Shank Squad Golf Tracker - CSS Styles
-   Professional golf performance analysis interface
+   The Shank Squad Golf Tracker - Enhanced CSS Styles
+   Professional golf performance analysis interface with hole-by-hole tracking
    ============================================================================= */
 
 /* Reset and Base Styles */
@@ -502,7 +502,8 @@ table tr:last-child td {
     gap: 10px;
 }
 
-.hole-inputs input {
+.hole-inputs input,
+.hole-inputs select {
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -547,6 +548,246 @@ table tr:last-child td {
 .scorecard-totals {
     background: #f8f9fa;
     font-weight: bold;
+}
+
+/* ========================================================================== */
+/* NEW STYLES FOR ENHANCED FEATURES */
+/* ========================================================================== */
+
+/* Hole-by-Hole Entry Styles */
+.hole-entry-card {
+    background: #f8f9fa;
+    border: 2px solid #e1e8ed;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.hole-entry-card:hover {
+    border-color: #2c5530;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.hole-entry-card.completed {
+    border-color: #28a745;
+    background: #f1f8f4;
+}
+
+.hole-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e1e8ed;
+}
+
+.hole-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #2c5530;
+}
+
+.hole-info {
+    display: flex;
+    gap: 15px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.hole-info span {
+    background: #e1e8ed;
+    padding: 4px 8px;
+    border-radius: 15px;
+    font-weight: 500;
+}
+
+.hole-entry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.hole-input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.hole-input-group label {
+    font-size: 0.85em;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.hole-input-group input,
+.hole-input-group select {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.9em;
+    transition: border-color 0.3s ease;
+}
+
+.hole-input-group input:focus,
+.hole-input-group select:focus {
+    outline: none;
+    border-color: #2c5530;
+    box-shadow: 0 0 0 2px rgba(44, 85, 48, 0.1);
+}
+
+.fairway-tracking {
+    display: none; /* Hidden for Par 3s */
+}
+
+.fairway-tracking.show {
+    display: block;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+.checkbox-group label {
+    margin: 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Hole Summary */
+.hole-summary {
+    background: #e8f5e8;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    border-left: 4px solid #28a745;
+}
+
+.hole-summary-text {
+    font-size: 0.9em;
+    color: #155724;
+    font-weight: 500;
+}
+
+/* Nine Selection Enhancement */
+#nine-selection-container {
+    margin-top: 15px;
+}
+
+#nine-selection-container .form-group {
+    margin-bottom: 0;
+}
+
+/* Trend Indicators */
+.trend-up {
+    color: #28a745;
+}
+
+.trend-down {
+    color: #dc3545;
+}
+
+.trend-stable {
+    color: #6c757d;
+}
+
+/* Enhanced Stats Cards */
+.stat-card.trend-improving {
+    border-left-color: #28a745;
+}
+
+.stat-card.trend-declining {
+    border-left-color: #dc3545;
+}
+
+.stat-card.trend-stable {
+    border-left-color: #6c757d;
+}
+
+/* Combination Round Indicator */
+.combination-indicator {
+    display: inline-block;
+    background: #28a745;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.7em;
+    font-weight: bold;
+    margin-left: 5px;
+    title: "Combined from 2 nine-hole rounds";
+}
+
+/* Enhanced Round Table */
+.rounds-table .nine-indicator {
+    font-size: 0.8em;
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Course Edit Mode Indicator */
+.edit-mode-indicator {
+    background: #ffc107;
+    color: #212529;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: 500;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+/* Advanced Stats Trend Display */
+.trend-icon {
+    font-size: 1.2em;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.improving-trend {
+    color: #28a745;
+}
+
+.declining-trend {
+    color: #dc3545;
+}
+
+.stable-trend {
+    color: #6c757d;
+}
+
+/* Holes Container for Hole-by-Hole */
+#holes-container {
+    max-height: 600px;
+    overflow-y: auto;
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+
+#holes-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+#holes-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+#holes-container::-webkit-scrollbar-thumb {
+    background: #2c5530;
+    border-radius: 4px;
+}
+
+#holes-container::-webkit-scrollbar-thumb:hover {
+    background: #1e3a21;
 }
 
 /* Responsive Design */
@@ -608,6 +849,22 @@ table tr:last-child td {
         grid-template-columns: 1fr;
     }
     
+    /* Hole-by-hole mobile adjustments */
+    .hole-entry-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hole-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .hole-info {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
     table {
         font-size: 0.8em;
     }
@@ -648,6 +905,19 @@ table tr:last-child td {
         width: 40px;
         padding: 3px;
     }
+    
+    .hole-entry-card {
+        padding: 15px;
+    }
+    
+    .hole-title {
+        font-size: 1.1em;
+    }
+    
+    .hole-info span {
+        padding: 2px 6px;
+        font-size: 0.8em;
+    }
 }
 
 /* Animation Classes */
@@ -663,6 +933,21 @@ table tr:last-child td {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
@@ -682,7 +967,94 @@ table tr:last-child td {
     100% { transform: rotate(360deg); }
 }
 
+/* Toast Notifications */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #2c5530;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.toast.success {
+    background: #28a745;
+}
+
+.toast.error {
+    background: #dc3545;
+}
+
+.toast.warning {
+    background: #ffc107;
+    color: #212529;
+}
+
+/* Enhanced Form Validation */
+.form-group.error input,
+.form-group.error select,
+.form-group.error textarea {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.1);
+}
+
+.form-group.success input,
+.form-group.success select,
+.form-group.success textarea {
+    border-color: #28a745;
+    box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.1);
+}
+
+.field-error {
+    color: #dc3545;
+    font-size: 0.8em;
+    margin-top: 5px;
+    display: none;
+}
+
+.field-error.show {
+    display: block;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+    }
+    
+    .header,
+    .tab-navigation,
+    .btn {
+        display: none;
+    }
+    
+    .tab-content {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    .stat-card {
+        border: 1px solid #ddd;
+        page-break-inside: avoid;
+    }
+    
+    table {
+        page-break-inside: avoid;
+    }
+}
+
 /* Dark mode support (optional) */
 @media (prefers-color-scheme: dark) {
-    /* Add dark mode styles here if desired */
+    /* Add dark mode styles here if desired in the future */
 }
